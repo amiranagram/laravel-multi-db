@@ -19,7 +19,7 @@ class CreateClientsTable extends Migration
             $table->string('host');
             $table->string('username');
             $table->string('password');
-            $table->string('database');
+            $table->string('database')->nullable();
             $table->timestamps();
         });
     }

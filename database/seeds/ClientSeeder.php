@@ -12,6 +12,9 @@ class ClientSeeder extends Seeder
      */
     public function run()
     {
-        factory(Client::class, 5)->create();
+        factory(Client::class, 5)->create()->each(function ($client, $key) {
+            $client->database = 'client_' . $client->id;
+            $client->save();
+        });
     }
 }

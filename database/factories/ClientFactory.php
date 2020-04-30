@@ -8,13 +8,10 @@ use Illuminate\Database\Eloquent\Factory;
 use Illuminate\Support\Str;
 
 $factory->define(Client::class, function (Faker $faker) {
-    $firstName = $faker->firstName;
-
     return [
-        'name' => $firstName . ' ' . $faker->lastName,
+        'name' => $faker->firstName . ' ' . $faker->lastName,
         'host' => 'localhost',
         'username' => 'root',
         'password' => '',
-        'database' => Str::lower($firstName),
     ];
 });
