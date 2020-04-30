@@ -13,6 +13,5 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'ClientController@index');
+Route::get('/clients/{id}/orders', 'ClientController@orders')->name('client.orders');
