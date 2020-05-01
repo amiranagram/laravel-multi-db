@@ -2,7 +2,6 @@
 
 /** @var Factory $factory */
 
-
 use App\SlaveModels\Order;
 use Faker\Generator as Faker;
 use Illuminate\Database\Eloquent\Factory;
